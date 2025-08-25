@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --fg: #1d1d1f;
+  --bg: #fbfbfd;
+  --accent: #007aff;
+  --secondary: #86868b;
+  --light-gray: #f5f5f7;
+  --border: #d2d2d7;
+  --glass: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Mono", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Host Grotesk",sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--fg);
+  letter-spacing: -0.025em;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--secondary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--fg);
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+
+.btn.secondary {
+  background: var(--fg);
+  border: 1px solid var(--fg);
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.btn.secondary a {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  will-change: opacity;
+  z-index: 2;
+  background: rgba(248,249,250,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+nav .logo img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+nav .logo a {
+  color: var(--fg);
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+nav .nav-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav .nav-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-login {
+  color: var(--secondary) !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.nav-login:hover {
+  color: var(--fg) !important;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  padding: 0.5rem 0;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  color: var(--fg);
+  transform-origin: center;
+  will-change: transform, opacity;
+  padding: 0 2rem;
+}
+
+.header p {
+  color:var(--secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+.company-hero {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+.company-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--fg);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03rem;
+  line-height: 1.1;
+}
+
+.company-tagline {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02rem;
+}
+
+.company-mission {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.core-business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  flex-wrap: wrap;
+}
+
+.business-item {
+  transition: all 0.3s ease;
+}
